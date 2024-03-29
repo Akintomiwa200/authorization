@@ -6,11 +6,6 @@ import nav from '../css/nav.module.css'
 
 const NavBar= ()=>{
 
-    const LoginHandler=()=>{
-        return(
-            <Link  to={'./Login'}/>
-        )
-    }
 
     return (
         <>
@@ -23,7 +18,10 @@ const NavBar= ()=>{
                     <Link className={nav.stag} to={'/settings'}>Settings</Link>
                 </div>
                 <div className={nav.right}>
-                    <Button name="Log In" onClick={()=>LoginHandler} />
+                    <Link to={'/Login'}>
+                        <Button name="Log In"/>
+                    </Link>
+
                     <Button name= "Log Out"/>
                     <div className={nav.img}>
                         <img src=""/>
